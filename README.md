@@ -9,7 +9,7 @@ Sistema de autenticación de usuarios desarrollado en Java con interfaz gráfica
 - Bloqueo de cuenta al exceder intentos permitidos
 - Interfaz gráfica con `JOptionPane`
 - Arquitectura en capas (presentación, servicio, excepciones)
-- Cobertura de pruebas del 100% con JaCoCo
+- Cobertura de pruebas con JaCoCo
 
 ## Tecnologías
 
@@ -65,6 +65,29 @@ mvn clean test jacoco:report
 ```
 
 El reporte se genera en `target/site/jacoco/index.html`.
+
+### Resultados de Cobertura - JaCoCo
+
+| Métrica | Total | Cobertos | Faltantes | Cobertura |
+|---------|-------|----------|-----------|-----------|
+| Instructions | 311 | 293 | 18 | 94% |
+| Branches | 20 | 19 | 1 | 95% |
+| Lines | 91 | 86 | 5 | 95% |
+| Complexity | 34 | 30 | 4 | 88% |
+| Methods | 24 | 21 | 3 | 88% |
+| Classes | 7 | 7 | 0 | 100% |
+
+### Cobertura por Clase
+
+| Clase | Instructions | Branches | Lines | Complexity | Methods |
+|-------|-------------|----------|-------|------------|---------|
+| LoginService | 100% | 100% | 100% | 100% | 100% |
+| LoginService.ResultadoLogin | 100% | n/a | 100% | 100% | 100% |
+| LoginException | 100% | n/a | 100% | 100% | 100% |
+| CuentaBloqueadaException | 100% | n/a | 100% | 100% | 100% |
+| CredencialesInvalidasException | 100% | n/a | 100% | 100% | 100% |
+| LoginUsuario | 96% | 88% | 95% | 75% | 75% |
+| LoginUsuario.JOptionPaneWrapper | 20% | 0% | 25% | 33% | 33% |
 
 ## Ejecución
 
